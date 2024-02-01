@@ -71,11 +71,11 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let ccell = userTableView.dequeueReusableCell(withIdentifier: "userTableViewCell", for: indexPath)as! userTableViewCell
-        ccell.firstName.text = UserArray[indexPath.row].name.firstname
-        ccell.lastnameLAbel.text = UserArray[indexPath.row].name.lastname
-        ccell.usernameLabel.text = UserArray[indexPath.row].username
-        return ccell
+        let userCell = userTableView.dequeueReusableCell(withIdentifier: "userTableViewCell", for: indexPath)as! userTableViewCell
+        userCell.firstName.text = UserArray[indexPath.row].name.firstname
+        userCell.lastnameLAbel.text = UserArray[indexPath.row].name.lastname
+        userCell.usernameLabel.text = UserArray[indexPath.row].username
+        return userCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
